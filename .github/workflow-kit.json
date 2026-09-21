@@ -4,7 +4,7 @@
     ".github/ISSUE_TEMPLATE/task.yml": "6974ca497923933734fe023431a28faaa358123ee8b5610e03dd55b199b19c1e",
     ".github/PULL_REQUEST_TEMPLATE.md": "d13bbc8ee71deccf71f153602ddd0b0b0bdd99f4f6dccaead63d7b187a663937",
     ".github/dependabot.yml": "c14448bf30227363f04f7d2f2c3c3463d862004cb27b108232c5518bc3da857a",
-    "AGENTS.md": "75bcbd858f4d60888465528167be5a1bcd774290d3f845d6687bbb89c1c7ea5e",
+    "AGENTS.md": "d16b9ef915fc02b0e8c2d156b6501fc0a4e3d43831df0f1849d4658068e10c73",
     "CONTRIBUTING.md": "871e70e6aaa75c4c3605f83478391a2280dd4b1129f6ac42075a86a9a18d7e4b",
     "scripts/check-skills.mjs": "ca3e5fa2d99b2bd6656c60765f1a5db6f882390805deb01f99daa8c91384d54c",
     "scripts/install-impeccable-hooks.mjs": "d4c8fdc3d4cdf6be3709283de65bb52afed2b48f6b029bc630796696ed495f06",
