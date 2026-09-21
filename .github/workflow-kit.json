@@ -1,0 +1,76 @@
+{
+  "files": {
+    ".coderabbit.yaml": "7b324044f7365154181b8368d2f5477953e42c258db083e41b813b8a2a6dbaca",
+    ".github/ISSUE_TEMPLATE/task.yml": "6974ca497923933734fe023431a28faaa358123ee8b5610e03dd55b199b19c1e",
+    ".github/PULL_REQUEST_TEMPLATE.md": "d13bbc8ee71deccf71f153602ddd0b0b0bdd99f4f6dccaead63d7b187a663937",
+    ".github/dependabot.yml": "c14448bf30227363f04f7d2f2c3c3463d862004cb27b108232c5518bc3da857a",
+    "AGENTS.md": "75bcbd858f4d60888465528167be5a1bcd774290d3f845d6687bbb89c1c7ea5e",
+    "CONTRIBUTING.md": "871e70e6aaa75c4c3605f83478391a2280dd4b1129f6ac42075a86a9a18d7e4b",
+    "scripts/check-skills.mjs": "ca3e5fa2d99b2bd6656c60765f1a5db6f882390805deb01f99daa8c91384d54c",
+    "scripts/install-impeccable-hooks.mjs": "d4c8fdc3d4cdf6be3709283de65bb52afed2b48f6b029bc630796696ed495f06",
+    "scripts/install-ponytail-hooks.mjs": "1d51f2eb4a8d9119797297df470d1e6337c58be80bb1c236a36223e46486decb",
+    "scripts/setup-skills.mjs": "da32700e0d65656eeab23e552ed8ac8bc774ce0df0846c9d23c698f09852dd36"
+  },
+  "hooks": {
+    ".claude/settings.json": {
+      "PostToolUse": [
+        "3aa7fbde02d4a37ea21965620f7945252f2d60d7e2e11800dcc2a10354472dd6"
+      ],
+      "Stop": [
+        "4a9d539f6c72f3943d443bb912d991b45b6408de3cfbcd5514fe4070da78fdb1"
+      ],
+      "SessionStart": [
+        "3be23f10c024a58ef59f2bba1552dcdeacb06321e78ea9e2a7c9d70d0beee71a",
+        "b8556f3608b0c0444e43b84987b1eea87e25221f51caa42012487f7dee41ae53"
+      ],
+      "SubagentStart": [
+        "ccbfca5bdbc034bf4eabe48244cda8e3d7de5323e40d2180a97aa061beda0ff7"
+      ],
+      "UserPromptSubmit": [
+        "378242162dedf1ccf8942d669798f50da926440a6b029d837c24d98e5bacdc25"
+      ]
+    },
+    ".codex/hooks.json": {
+      "SessionStart": [
+        "0ce61e920455ff12509528c3c69595a9cd0860d48b387a53a137deaad828c76a",
+        "198d6e02fd85075700af83a396c0bd92203b53b8c89adfdb57cd73275efddb8b"
+      ],
+      "SubagentStart": [
+        "eb3b95ada48a7ef11cb4d660ad023bad91ab4f1d599736113079001bdde4a8f4"
+      ],
+      "UserPromptSubmit": [
+        "6c4b92fa9180dca625ca7c3360657a4d606106f1694cabf4412c048cc33fb27c"
+      ],
+      "PostToolUse": [
+        "5a05b4c4c53b01b91db4ad723b185f3159dca5c87d9ee6b771da31251da9a006"
+      ],
+      "Stop": [
+        "b2f12ba484c9167770d246b947847ea20576bb05894e69824d69936cef4a2f17"
+      ]
+    },
+    ".cursor/hooks.json": {
+      "sessionStart": [
+        "976263778154fe60e3e777f49697156344279ca17ab4031bdfb361f8b6b59c66"
+      ],
+      "beforeSubmitPrompt": [
+        "f2d146f04d6667ddf36d39941a18bc07dcba6f0a3e34450c151bfbfdd3030759"
+      ]
+    },
+    ".github/hooks/impeccable.json": {
+      "postToolUse": [
+        "97cef358cd56931e56364336b3abe9f25533f4d1f06560910527dd3191a5666f"
+      ]
+    },
+    ".github/hooks/ponytail.json": {
+      "sessionStart": [
+        "cca615119543a23b4ac534c1a98b61c5f2f28dddcf39d1f0ea95ce77a7d09a2b"
+      ],
+      "userPromptSubmitted": [
+        "e33279c72f9ee0fa99525d5bc4a479d24e1bd4adcee266b96d47e069a4c4a41a"
+      ],
+      "subagentStart": [
+        "42d633d40b784ce0fdffbf35d63902bd862c968b174196500bc8529e4128a1ca"
+      ]
+    }
+  }
+}
