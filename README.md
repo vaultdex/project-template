@@ -5,6 +5,9 @@ Use **Use this template** on GitHub to start a project with the shared
 Impeccable sources stay pinned Git submodules; improvements arrive as update PRs.
 Add your own application and project-specific contracts without copying kit code.
 
+For agent-guided setup, give your agent the [setup entry](https://github.com/vaultdex/workflow-kit/blob/main/SETUP.md).
+It asks for repository, board and integration choices, then performs and verifies setup.
+
 ## Setup
 
 Use Git, Node 26 and authenticated GitHub CLI:
