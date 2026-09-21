@@ -22,6 +22,11 @@ node .vendor/workflow-kit/scripts/setup-github.mjs OWNER/REPO
 
 The final command copies the public board template, links this repository and
 creates missing labels. Commit `.github/workflow-project.json`. Configure native
+statuses in order: Backlog → Ready → In progress → Automated review → Human review → Done.
+Ready for Review starts Automated review; Human review requires completed automatic
+reviews, dispositioned findings and passed checks (disclose confirmed unavailable
+reviewers under the shared workflow exception). Further edits restart the review cycle.
+Done still requires human acceptance and merge. Configure native
 Project Auto-add for your repo and verify status automations in the GitHub UI;
 cancelled work must not become Done. No private Vaultdex items are copied.
 
