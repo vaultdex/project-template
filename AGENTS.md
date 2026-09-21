@@ -5,9 +5,18 @@ Refresh changed rules/state; reuse valid evidence. The GitHub Project recorded i
 `.github/workflow-project.json` owns order/status; issues own scope,
 acceptance, dependencies and evidence; PRs own review. No second task ledger,
 claim PRs or central steering issue.
-Assign every task a milestone, an explicit Project Priority and matching labels,
+Assign every issue a milestone, an explicit Project Priority and matching labels,
 including Backlog and follow-ups; retain metadata after closure.
 See .vendor/workflow-kit/docs/CONTRIBUTING.md#milestones for scope and the ongoing hotfix milestone.
+
+New issues start in Backlog. Human-authorized triage may promote executable issues
+to Ready; this alone never authorizes implementation or Doing.
+
+Start implementation only from Ready and on an explicit human request for that
+work. If Ready is empty, analyze Backlog and propose the next executable issue
+with rationale/blockers; do not implement or change status. A human must authorize
+promotion/start; record readiness before moving to In progress (Doing).
+Existing authorization covers review fixes within the same scope, not new tasks.
 
 Before work, check issue, dependencies, current main and competing PRs. Use
 codex/<issue>-<topic>, one driver and linked branch/PR. Assignment is not a lock.
@@ -74,5 +83,5 @@ consistent. Reuse standard/native facilities before introducing dependencies.
 
 ## Project-specific contracts
 
-Read local docs/CONTRIBUTING.md alongside the shared rules. Record architecture,
+Read local CONTRIBUTING.md alongside the shared rules. Record architecture,
 build/test commands and acceptance in project docs before behavior changes.
