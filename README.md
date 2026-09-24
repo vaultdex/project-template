@@ -16,9 +16,14 @@ Use Git, Node 26 and authenticated GitHub CLI:
 git clone --recurse-submodules https://github.com/OWNER/REPO.git
 cd REPO
 node scripts/setup-skills.mjs
-node scripts/check-skills.mjs
+node .vendor/workflow-kit/scripts/check-skills.mjs .
 node .vendor/workflow-kit/scripts/setup-github.mjs OWNER/REPO
 ```
+
+The checker runs directly from the kit; the final `.` selects this project.
+Only the bootstrap entrypoint and both installer entrypoints remain in `scripts/`.
+Their comments explain the callers and why those compatibility paths are kept;
+the implementation lives only in the kit.
 
 The final command copies the public board template, links this repository and
 creates missing labels. Commit `.github/workflow-project.json`. Configure native
@@ -58,7 +63,7 @@ For an update PR, inspect the new source revision, then run:
 git submodule update --init --recursive
 node .vendor/workflow-kit/scripts/init-project.mjs . --existing
 node scripts/setup-skills.mjs
-node scripts/check-skills.mjs
+node .vendor/workflow-kit/scripts/check-skills.mjs .
 ```
 
 Commit refreshed cloud discovery and managed configuration in the same PR. Local
