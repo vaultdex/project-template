@@ -6,10 +6,9 @@
     ".github/dependabot.yml": "c14448bf30227363f04f7d2f2c3c3463d862004cb27b108232c5518bc3da857a",
     "AGENTS.md": "bd89864afb19106d0ebdc89e2a542f829b9f247c26dc2de37cffba9c93f8d6e1",
     "CONTRIBUTING.md": "871e70e6aaa75c4c3605f83478391a2280dd4b1129f6ac42075a86a9a18d7e4b",
-    "scripts/check-skills.mjs": "ca3e5fa2d99b2bd6656c60765f1a5db6f882390805deb01f99daa8c91384d54c",
-    "scripts/install-impeccable-hooks.mjs": "d4c8fdc3d4cdf6be3709283de65bb52afed2b48f6b029bc630796696ed495f06",
-    "scripts/install-ponytail-hooks.mjs": "1d51f2eb4a8d9119797297df470d1e6337c58be80bb1c236a36223e46486decb",
-    "scripts/setup-skills.mjs": "da32700e0d65656eeab23e552ed8ac8bc774ce0df0846c9d23c698f09852dd36"
+    "scripts/install-impeccable-hooks.mjs": "40c0c9ea2a776f52d5525046571081c918a7cf33e95b5ac777380f5cde35ea7f",
+    "scripts/install-ponytail-hooks.mjs": "7ed65982babcf8b8056e55153e10d5013549759bd1c056cf686bcc7d32de0855",
+    "scripts/setup-skills.mjs": "453d9fd1f075efac72af510d9e17e8cbfbf675b8b32d860bd89d52f95d7c31e8"
   },
   "hooks": {
     ".claude/settings.json": {
