@@ -15,15 +15,14 @@ Use Git, Node 26 and authenticated GitHub CLI:
 ```sh
 git clone --recurse-submodules https://github.com/OWNER/REPO.git
 cd REPO
-node scripts/setup-skills.mjs
+node .vendor/workflow-kit/scripts/setup-skills.mjs .
 node .vendor/workflow-kit/scripts/check-skills.mjs .
 node .vendor/workflow-kit/scripts/setup-github.mjs OWNER/REPO
 ```
 
-The checker runs directly from the kit; the final `.` selects this project.
-Only the bootstrap entrypoint and both installer entrypoints remain in `scripts/`.
-Their comments explain the callers and why those compatibility paths are kept;
-the implementation lives only in the kit.
+All shared harness commands run directly from the kit. The final `.` selects this
+project for setup, checks and hook installers. This template contains no forwarding
+scripts; keep only actual product-specific scripts when adding an application.
 
 The final command copies the public board template, links this repository and
 creates missing labels. Commit `.github/workflow-project.json`. Configure native
@@ -38,14 +37,16 @@ cancelled work must not become Done. No private Vaultdex items are copied.
 After reviewing the checkout, install hooks explicitly:
 
 ```sh
-node scripts/install-ponytail-hooks.mjs
-node scripts/install-impeccable-hooks.mjs
+node .vendor/workflow-kit/scripts/install-ponytail-hooks.mjs .
+node .vendor/workflow-kit/scripts/install-impeccable-hooks.mjs .
 ```
 
 Review/enable hook definitions in each agent. Personal settings and plugin installs
 are preserved. CodeRabbit requires GitHub App access; Codex requires a connected
 repository and automatic reviews enabled in Codex settings. Organization-wide App
 access can already cover the new repo. Configuration alone does not prove activation.
+Read the pinned kit's setup/security notes first; the known Ponytail PATH finding
+vaultdex/workflow-kit#3 is not fixed by moving scripts into the kit.
 
 ## Working and updating
 
@@ -62,14 +63,21 @@ For an update PR, inspect the new source revision, then run:
 ```sh
 git submodule update --init --recursive
 node .vendor/workflow-kit/scripts/init-project.mjs . --existing
-node scripts/setup-skills.mjs
+node .vendor/workflow-kit/scripts/setup-skills.mjs .
 node .vendor/workflow-kit/scripts/check-skills.mjs .
 ```
 
 Commit refreshed cloud discovery and managed configuration in the same PR. Local
 skill links and bundles are ignored. Edited files are preserved/refused, never
-force-replaced. Changed hook snapshots require installation and personal trust.
+force-replaced. Changed hook definitions require renewed personal review/trust.
 CI compares committed discovery before setup, so stale generated output fails.
+
+For upgrades from a wrapper-based template, update any external workspace bootstrap
+and hook-install caller before removing its old entrypoint. `init-project` removes
+only unchanged owned wrappers and migrates recorded hook metadata; it preserves
+foreign handlers. For Snagg Symphony, deploy vaultdex/snagg-symphony#10 first.
+The kit's separate review-policy PR #24 is not included in this pin; apply it only
+after its required human acceptance and merge.
 
 The included PR check verifies kit integration, not application correctness.
 Budget: one standard Linux job, no schedule/cache/artifacts, maximum five minutes
